@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .sosmed-border {
+    @apply w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-400 text-slate-400 hover:border-primary hover:bg-primary hover:text-white;
+  }
+  .hamburger-line {
+    @apply w-[30px] h-[2px] my-2 block bg-dark;
+  }
+  .nav-li {
+    @apply text-base text-dark py-2 mx-8 flex group-hover:text-rose-800;
+  }
+}
+
+.navbar-fixed {
+  @apply fixed z-[9999] bg-gradient-to-r from-rose-300 to-indigo-200 bg-opacity-75 backdrop-blur-sm;
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.hamburger-active > span:nth-child(1) {
+  @apply rotate-45;
+}
+
+.hamburger-active > span:nth-child(2) {
+  @apply scale-0;
+}
+
+.hamburger-active > span:nth-child(3) {
+  @apply -rotate-45;
+}
